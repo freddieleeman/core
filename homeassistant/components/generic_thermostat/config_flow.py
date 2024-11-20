@@ -38,7 +38,7 @@ OPTIONS_SCHEMA = {
         )
     ),
     vol.Required(CONF_HEATER): selector.EntitySelector(
-        selector.EntitySelectorConfig(domain=[fan.DOMAIN, switch.DOMAIN])
+        selector.EntitySelectorConfig(domain=[fan.DOMAIN, switch.DOMAIN, input_boolean.DOMAIN])
     ),
     vol.Required(
         CONF_COLD_TOLERANCE, default=DEFAULT_TOLERANCE
